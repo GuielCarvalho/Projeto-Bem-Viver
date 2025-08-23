@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrar Atendimento</title>
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class="mb-4">Registrar Atendimento</h2>
+    <form action="atendimento-salvar.php" method="POST">
+      <div class="mb-3">
+        <label for="id_agendamento" class="form-label">Agendamento</label>
+        <select class="form-select" id="id_agendamento" name="id_agendamento" required>
+          <option value="" disabled selected>Selecione o agendamento</option>
+          <!-- Exemplo de opções, substitua dinamicamente via PHP -->
+          <option value="1">Consulta com João Silva - 2025-06-01 14:00</option>
+          <option value="2">Consulta com Maria Souza - 2025-06-02 10:30</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="observacoes" class="form-label">Observações</label>
+        <textarea class="form-control" id="observacoes" name="observacoes" rows="4" placeholder="Digite as observações do atendimento..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Salvar Atendimento</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS Bundle CDN (opcional para componentes interativos) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
